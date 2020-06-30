@@ -1,6 +1,7 @@
 from django.shortcuts import render
-from blog.models import Post, Comment
+
 from .forms import CommentForm
+from blog.models import Post, Comment
 
 def blog_index(request):
     posts = Post.objects.all().order_by("-created_on")
@@ -8,27 +9,29 @@ def blog_index(request):
     return render(request, "blog_index.html", context)
 
 def blog_category(request, category):
-    post = Post.objects.filter(categories__name__contains=category).order_by("-created_on")
-    context = {"post":post,
+    posts = Post.objects.filter(categories__name__contains=category).order_by("-created_on")
+    context = {"posts":posts,
                "category":category}
-    return render(request,"blog_category.html", context)
+    return render(request, "blog_category.html", context)
 
 def blog_detail(request, pk):
     post = Post.objects.get(pk=pk)
-    form = CommentForm():
-    if request.mathod =='POST':
-        form=CommentForm(request.POST)
+
+    form = CommentForm()
+    if request.method == 'POST':
+        form = CommentForm(request.POST)
         if form.is_valid():
-            comment=Comment(
+            comment = Comment(
                 author=form.cleaned_data["author"],
                 body=form.cleaned_data["body"],
                 post=post
             )
             comment.save()
-    comments = Comment.objects.filter(post = post)
+
+    comments = Comment.objects.filter(post=post)
     context = {
         "post": post,
         "comments": comments,
         "form": form,
     }
-    return render(request,"blog_detail.html", context)
+    return render(request, "blog_detail.html", context)
