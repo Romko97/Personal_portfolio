@@ -21,4 +21,6 @@ urlpatterns = [
     #path('', include(''))
     path('projects/',include("projects.urls")),
     path("blog/", include("blog.urls")),
+    path("my_certificates/", include("my_certificates.urls")),
+    path("autobiography/", include("autobiography.urls")),
 ]
