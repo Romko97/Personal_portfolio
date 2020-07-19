@@ -3,15 +3,17 @@
 {% block page_content %}
 <h1>Projects</h1>
 <div class="row">
+    
 {% for project in projects %}
-    <div class="col-md-4">
-        <div class="card mb-2">
-            <img class="card-img-top" src="{% static project.image %}">
-            <div class="card-body">
+
+    <div class="col-md-4" data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">
+        <div class="card bg-dark text-white" >
+            <img class="card-img-top" src="{% static project.image %}" >
+            <div class="card-body"class="collapse multi-collapse" id="multiCollapseExample1" >
                 <h5 class="card-title">{{ project.title }}</h5>
                 <p class="card-text">{{ project.description }}</p>
                 <a href="{% url 'project_detail' project.pk %}"
-                   class="btn btn-primary">
+                   class="btn btn-outline-warning">
                     Read More
                 </a>
             </div>

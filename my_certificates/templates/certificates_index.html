@@ -3,15 +3,20 @@
 {% block title %} 
 {{ title }}
 {%endblock%}
+
 {% block page_content %}
-    <h1>Certificates</h1>
+    <h1>certificates</h1>
         {% for certificate in certificates %}
             <div class="col-md-4">
-                <div class="card mb-2">
+                <div class="card bg-dark text-white">
                     <img class="card-img-top" src="{% static certificate.image %}">
                     <div class="card-body">
                         <h5 class="card-title">{{ certificate.title }}</h5>
                         <p class="card-text">{{ certificate.description }}</p>
+                        <a href="{% url 'certificate_detail' certificate.pk %}"
+                        class="btn btn-outline-success">
+                            Read More
+                        </a>
                     </div>
                 </div>
             </div>
