@@ -4,17 +4,12 @@
   },
   "hosting": {
     "site": "romanwork",
-    "public": "",
+    "public": "public",
     "ignore": [
       "firebase.json",
       "**/.*",
-      "**/node_modules/**"
-    ],
-    "rewrites": [
-      {
-        "source": "**",
-        "destination": "/index.html"
-      }
+      "**/node_modules/**",
+      "venv"
     ]
   }
 }
