@@ -6,6 +6,7 @@
   <title> 
   {% block title %} {% endblock %}
   </title>
+  <link rel="stylesheet" type="text/css" href="mystyle.css">
 </head>
 <body>
   
@@ -13,7 +14,9 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container">
         <a class="navbar-brand" href="{% url 'project_index' %}"> Portfolio  </a>
-       
+
+        <button onclick="myFunction()">Toggle dark mode</button>
+
         <button 
             class="navbar-toggler" 
             type="button" 

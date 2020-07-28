@@ -3,4 +3,3 @@ from projects.models import Project
 
 class ProjectAdmin(admin.ModelAdmin):
     pass
-

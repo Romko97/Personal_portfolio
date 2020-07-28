@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'blog',
     'my_certificates',
     'autobiography',
+    'todolist',
 
 ]
 
