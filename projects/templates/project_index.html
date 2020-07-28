@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% load static %}
+
 {% block page_content %}
 <h1>Projects</h1>
 <div class="row">
@@ -8,7 +8,7 @@
 
     <div class="col-md-4" data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">
         <div class="card bg-dark text-white" >
-            <img class="card-img-top" src="{% static project.image %}" >
+            <img class="card-img-top" src="{ project.image.url }" >
             <div class="card-body"class="collapse multi-collapse" id="multiCollapseExample1" >
                 <h5 class="card-title">{{ project.title }}</h5>
                 <p class="card-text">{{ project.description }}</p>

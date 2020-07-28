@@ -9,7 +9,7 @@
         {% for certificate in certificates %}
             <div class="col-md-4">
                 <div class="card bg-dark text-white">
-                    <img class="card-img-top" src="{% static certificate.image %}">
+                    <img class="card-img-top" src="{% static certificate.image.url %}">
                     <div class="card-body">
                         <h5 class="card-title">{{ certificate.title }}</h5>
                         <p class="card-text">{{ certificate.description }}</p>

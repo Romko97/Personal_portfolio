@@ -22,6 +22,6 @@ class TodoList(models.Model):
     def __str__(self):
         return self.title #name to be shown when called
 
-""" The Category class is for saving our category while the Todolist is the main database for our todos.
-
+"""
+ The Category class is for saving our category while the Todolist is the main database for our todos.
 """
