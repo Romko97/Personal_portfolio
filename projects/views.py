@@ -4,6 +4,7 @@ from projects.models import Project
 def project_index(request):
     projects = Project.objects.all()
     context = {'projects': projects}
+    print("request>>>",request, 'project_index.html', 'context>>>>',context)
     return render(request, 'project_index.html', context)
 
 def project_detail(request, pk):

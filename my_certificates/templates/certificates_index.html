@@ -6,10 +6,12 @@
 
 {% block page_content %}
     <h1>certificates</h1>
+    <div class="row">
+
         {% for certificate in certificates %}
             <div class="col-md-4">
                 <div class="card bg-dark text-white">
-                    <img class="card-img-top" src="{% static certificate.image.url %}">
+                    <img class="card-img-top"  src="{% static certificate.image %}" alt="ВИБАЧТЕ ФОТО ТИМЧАСОВО ВІДСУТНЄ">
                     <div class="card-body">
                         <h5 class="card-title">{{ certificate.title }}</h5>
                         <p class="card-text">{{ certificate.description }}</p>
@@ -21,4 +23,6 @@
                 </div>
             </div>
             {% endfor %}
+    </div >
+
 {% endblock %}
