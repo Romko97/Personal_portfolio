@@ -9,7 +9,8 @@ dist/
 build/
 *.egg-info/
 venv
-.png
-.jpg
+*.png
+*.jpg
 .vscode
 .firebase
+img/
