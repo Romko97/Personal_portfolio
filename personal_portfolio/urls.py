@@ -23,4 +23,5 @@ urlpatterns = [
     path("blog/", include("blog.urls")),
     path("my_certificates/", include("my_certificates.urls")),
     path("autobiography/", include("autobiography.urls")),
+    path("todolist/", include("todolist.urls")),
 ]
