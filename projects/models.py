@@ -10,4 +10,4 @@ class Project(models.Model):
 
 
 class Technology(models.Model):
-    name = models.CharField(max_length=100)
+    name = models.ManyToManyField("Project", related_name="Technology")
