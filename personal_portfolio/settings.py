@@ -127,4 +127,6 @@ USE_TZ = True
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
 
+ALLOWED_HOSTS = ['gentle-ridge-07301.herokuapp.com']
+
 #django_heroku.settings(locals())
