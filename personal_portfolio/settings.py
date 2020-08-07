@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
-#import django_heroku
+import django_heroku
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -129,4 +129,6 @@ STATIC_URL = '/static/'
 
 ALLOWED_HOSTS = ['gentle-ridge-07301.herokuapp.com', '127.0.0.1']
 
-#django_heroku.settings(locals())
+# Configure Django App for Heroku.
+
+django_heroku.settings(locals())
