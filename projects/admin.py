@@ -1,5 +1,5 @@
 from django.contrib import admin
-from projects.models import Project, Technology
+from projects.models import *
 
 class ProjectAdmin(admin.ModelAdmin):
     list_display = ("id","title", "description", "GitHub","image",)
